@@ -36,6 +36,8 @@ export default function MyModal(props) {
         padding: '10px',
         overflowX: 'auto',
         scrollBehavior: 'smooth',
+        maxHeight: '80vh',
+        maxWidth: '80vw',
     };
 
     const handleClose = () => {
@@ -152,19 +154,19 @@ export default function MyModal(props) {
 
                                     {element.period && (
                                         <TableRow>
-                                            <TableCell>Named by</TableCell>
+                                            <TableCell>Period</TableCell>
                                             <TableCell>{element.period}</TableCell>
                                         </TableRow>
                                     )}
 
-                                    {element.phase && (
+                                    {element.phase.length > 0 && (
                                         <TableRow>
                                             <TableCell>Phase</TableCell>
                                             <TableCell>{element.phase}</TableCell>
                                         </TableRow>
                                     )}
 
-                                    {element.shells && (
+                                    {element.shells.length > 0 && (
                                         <TableRow>
                                             <TableCell>Electrons per shell</TableCell>
                                             <TableCell>{element.shells.join(', ')}</TableCell>
@@ -192,7 +194,7 @@ export default function MyModal(props) {
                                         </TableRow>
                                     )}
 
-                                    {element.ionization_energies && (
+                                    {element.ionization_energies.length > 0 && (
                                         <TableRow>
                                             <TableCell>Ionization energies</TableCell>
                                             <TableCell>{element.ionization_energies.join(' kJ/mol, ')} kJ/mol</TableCell>
