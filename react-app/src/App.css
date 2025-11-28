@@ -44,8 +44,3 @@
 .papers:hover {
   box-shadow: 3px 4px 8px 3px orange;
 }
-
-.modalTabel>tbody>tr, .modalTabel>tbody>td {
-  border: 1px solid black !important;
-  
-}
