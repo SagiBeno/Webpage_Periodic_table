@@ -11,7 +11,7 @@ app.get('/api/elements', (req, res) => {
     fetch('https://api.dedolist.com/api/v1/science/periodic-table-detailed/')
     .then(async (response) => {
         const data = await response.json();
-        return res.status(200).send(JSON.stringify(data))
+        return res.status(200).json(data);
     })
     .catch(() => {
         return res.sendStatus(500)
