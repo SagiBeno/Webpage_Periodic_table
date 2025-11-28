@@ -56,6 +56,7 @@ export default function PeriodicTable(props) {
                                 <div style={{fontSize: 10}}>{element.number}</div>
                                 <div><strong style={{fontSize: 20}}>{element.symbol}</strong></div>
                                 <div style={{fontSize: 12}}>{element.name}</div>
+                                <div style={{fontSize: 10}}>{element.atomic_mass}</div>
                             </div>
                             
                         </Paper>
