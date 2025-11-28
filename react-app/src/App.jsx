@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css'
 import PeriodicTable from './Components/PeriodicTable'
-import Spinner from 'react-bootstrap/Spinner';
+import CircularProgress from '@mui/material/CircularProgress';
+import Stack from '@mui/material/Stack';
 
 async function fetchElements(setElements, setLoading) {
   setLoading(true)
@@ -27,7 +28,10 @@ function App() {
   return (
     <>
       {
-        loading && <Spinner animation="border" variant="info" />
+        loading &&
+        <Stack spacing={2} direction="row" alignItems="center">
+          <CircularProgress size="3rem" />
+        </Stack>
       }
       {
         elements.length > 0 && <PeriodicTable data={elements}/>
