@@ -33,7 +33,7 @@ export default function MyModal(props) {
         borderRadius: '6px',
         backgroundColor: element.color,
         color: isDark(element.color) ? 'white' : 'black',
-        padding: '10px',
+        padding: '15px',
         overflowX: 'auto',
         scrollBehavior: 'smooth',
         maxHeight: '80vh',
@@ -58,7 +58,7 @@ export default function MyModal(props) {
                             {element.name} ({element.symbol})
                         </Typography>
 
-                        <IconButton sx={{ position: 'absolute', right: 8, top: 8 }} onClick={handleClose}>
+                        <IconButton sx={{ position: 'absolute', right: 8, top: 8 }} onClick={() => handleClose()}>
                             <ClearRoundedIcon />
                         </IconButton>
                     </Box>
@@ -86,7 +86,7 @@ export default function MyModal(props) {
 
                     <Box sx={{ textAlign: 'center', marginTop: '10px', padding: '10px' }}>
                         <strong>More details</strong>
-                        <TableContainer component={Paper} style={{marginTop: '10px', overflowY: 'scroll', scrollBehavior: 'smooth', maxHeight: '200px' }}>
+                        <TableContainer component={Paper} style={{marginTop: '10px', overflowY: 'scroll', scrollBehavior: 'smooth', maxHeight: '200px', }}>
                             <Table sx={{ minWidth: 300 }} aria-label="simple table">
                                 <TableBody>
                                     {element.atomic_mass && (

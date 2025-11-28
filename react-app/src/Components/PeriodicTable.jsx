@@ -31,7 +31,7 @@ export default function PeriodicTable(props) {
                     overflowX: 'auto',
                     scrollBehavior: 'smooth',
                     p: 1,
-                    maxWidth: '90vw',
+                    maxWidth: "80vw",
                 }}
             >
                 {
