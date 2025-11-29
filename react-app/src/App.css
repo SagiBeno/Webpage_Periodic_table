@@ -43,9 +43,31 @@
 
 .papers:hover {
   box-shadow: 3px 4px 8px 3px orange;
+  animation: pulse 2s infinite;
 }
 
-.modalTabel>tbody>tr, .modalTabel>tbody>td {
-  border: 1px solid black !important;
-  
+.textFieldBox {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .controllerBox {
+    flex-direction: row;
+  }
+
+  .textFieldBox {
+    margin: 0 0 10px 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

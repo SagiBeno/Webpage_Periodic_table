@@ -5,11 +5,12 @@ import MyModal from './MyModal';
 
 export default function PeriodicTable(props) {
     const elements = props?.data;
+    const maxCols = props?.maxCols;
+    const maxRows = props?.maxRows;
+    
+    const search = props.search;
     const [showModal, setShowModal] = useState(false);
     const [element, setElement] = useState();
-
-    const maxCols = Math.max(...elements.map(element => element.xpos));
-    const maxRows = Math.max(...elements.map(element => element.ypos));
 
     const handleShowMore = elementNumber => {
         setShowModal(true);
@@ -48,6 +49,8 @@ export default function PeriodicTable(props) {
                                 backgroundColor: element.color,
                                 width: '75px',
                                 height: '75px',
+                                animation: element.name.toLowerCase().includes(search) || element.symbol.toLowerCase().includes(search) ? 'pulse 2s infinite' : '',
+                                boxShadow: element.name.toLowerCase().includes(search) || element.symbol.toLowerCase().includes(search) ? '3px 4px 8px 3px red' : ''
                             }}
 
                             onClick={() => handleShowMore(element.number)}
