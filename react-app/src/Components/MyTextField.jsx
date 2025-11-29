@@ -15,7 +15,7 @@ export default function MyTextField(props) {
     }
 
     return (
-        <Box>
+        <Box sx={{width: '200px'}} className='textFieldBox'>
             <TextField id="outlined-basic" label="Search an element..." variant="outlined" onChange={(e) => handleOnchange(e)} />
         </Box>
     )
